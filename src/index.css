@@ -1,13 +1,134 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+
+.score{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width:740px;;
+  height:100px;
+  background-color: #213743;
+  margin-bottom: 3px;
+}
+.wrapper {
+  position:relative;
+  display:flex;
+  max-height:650px;
+  max-width:740px;;
+}
+
+.wrapper .settings{
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  background-color: rgb(33, 55, 67);
+  min-width: 200px ;
+}
+
+.settings .btn {
+  position:relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;;
+  box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 0px, rgb(0 0 0 / 12%) 0px 1px 2px 0px;
+  background:rgb(31, 255, 32);
+  padding: 25px;
+  font-size:25px;
+  font-weight: bold;
+  border: 1px solid transparent;
+  border-radius: 15px
+}
+.btn-container{
+  text-align: center;  
+  padding-top: 100px;  
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+  background-color: #0F212E;
+  padding: 3px;
+
+
+}
+.container button {
+  background-color: #2F4553;
+  aspect-ratio: 1;
+}
+
+.container .box{
+  border: 1px solid black;
+  border-radius: 7px;
+  width: 100px;
+  height:100px;
+  transition:0.3s;
+  background-size: 100px;
+  background-repeat: no-repeat;
+
+  /*background-image: url('https://stake.com//d401a08beb46ae17e3388b5083fca98a.svg');*/
+}
+
+.container .box:hover{
+  background-color: #557085;
+  transform: scale(1.1);
+  transform-origin: bottom;
+}
+
+
+.finish-score{
+  color: rgb(0, 231, 1);
+  font-size: 1rem;
+  background: rgb(26, 44, 56);
+  border-radius: 0.5rem;
+  text-align: center;
+  position: absolute;
+  font-weight: 800;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  max-width: 100%;
+  min-width: 150px;
+  animation-fill-mode: forwards;
+  animation-duration: 300ms;
+  animation-timing-function: cubic-bezier(0.87, -0.41, 0.19, 1.44);
+  border: 3px solid rgb(0, 231, 1);
+  box-shadow: rgb(0 0 0 / 20%) 0px 10px 15px -3px, rgb(0 0 0 / 10%) 0px 4px 6px -2px;
+  display:none;
+
+}
+
+
+.finish-score .center{
+  text-align: center;
+  width: 100%;
+  padding: 1em;
+  display:block
+}
+
+.mineNumberSetting{
+  display:flex;
+  color: #ccc;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom:15px;
+  font-size: 18px;
+  
+}
+.mineNumberText{
+  margin-bottom: 15px;
+}
+#mineNumber{
+  display: flex;
+  width: 100%;
+  height:30px;
+  flex:1;
+  background:#0F212E;
+  color:white;
 }
